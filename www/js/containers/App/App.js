@@ -3,7 +3,21 @@
 
   angular
     .module('starter')
+    .config(routeConfig)
     .controller('AppController', AppController)
+
+  routeConfig.$inject = ['$stateProvider']
+  function routeConfig($stateProvider) {
+    $stateProvider
+      .state(
+        'app',
+        {
+          url: '/app',
+          templateUrl: 'js/containers/App/App.html',
+          controller: 'AppController'
+        }
+      )
+  }
 
   AppController.$inject = ['$scope']
   function AppController($scope) {
