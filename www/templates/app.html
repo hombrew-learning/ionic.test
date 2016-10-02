@@ -1,0 +1,8 @@
+<div class="padding text-center">
+  <h3>Valora la Aplicación</h3>
+  <div>
+    <a href="javascript:" ng-repeat="currentStar in ratingArr" class="padding" style="text-decoration:none;">
+      <i class="icon {{currentStar.icon}}" ng-click="setRating(currentStar.value)"></i>
+    </a>
+  </div>
+</div>

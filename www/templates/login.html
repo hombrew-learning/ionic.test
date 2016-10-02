@@ -1,0 +1,11 @@
+<div class="list">
+  <label class="item item-input">
+    <input type="email" placeholder="Email" ng-model="email">
+  </label>
+  <label class="item item-input">
+    <input type="password" placeholder="Password" ng-minlength="6" ng-model="password">
+  </label>
+  <div class="padding">
+    <button class="button button-assertive button-block" ng-disabled="!email || !password" ui-sref="app">Sign In</button>
+  </div>
+</div>

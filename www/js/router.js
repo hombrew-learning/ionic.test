@@ -12,21 +12,23 @@
   function routesConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state(
-        'vista1',
+        'login',
         {
-          url: '/vista1',
-          template: '<div class="padding"><h2>Vista 1</h2><button class="button button-positive" ui-sref="vista2">A Vista 2</button></div>'
+          url: '/login',
+          templateUrl: 'templates/login.html',
+          controller: 'LoginController'
         }
       )
       .state(
-        'vista2',
+        'app',
         {
-          url: '/vista2',
-          template: '<div class="padding"><h2>Vista 2</h2><button class="button button-assertive" ui-sref="vista1">A Vista 1</button></div>'
+          url: '/app',
+          templateUrl: 'templates/app.html',
+          controller: 'AppController'
         }
       )
 
-    $urlRouterProvider.otherwise('/vista1')
+    $urlRouterProvider.otherwise('/login')
   }
 
 })();
